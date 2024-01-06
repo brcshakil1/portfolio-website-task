@@ -1,0 +1,40 @@
+// Reset style
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// common styles
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.navbar-container {
+    display: flex; 
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .my-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    #menu-icon-btn {
+        border: none;
+        background-color: none;
+        cursor: pointer;
+        .menu-icon {
+            font-size: 1.5rem;
+        }
+    }
+}
