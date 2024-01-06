@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   margin: auto;
@@ -20,11 +24,14 @@ a {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
+  align-items: center;
+  padding: 25px 15px;
+  position: relative;
 }
 .navbar-container .my-name {
   font-size: 1.5rem;
   font-weight: 600;
+  color: black;
 }
 .navbar-container #menu-icon-btn {
   border: none;
@@ -33,4 +40,39 @@ a {
 }
 .navbar-container #menu-icon-btn .menu-icon {
   font-size: 1.5rem;
+}
+.navbar-container .menu-links {
+  position: absolute;
+  background: #191B13;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 20px 25px;
+  transition: all 0.5s ease-in-out;
+}
+.navbar-container .menu-links .menu-close {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.navbar-container .menu-links .links li {
+  font-size: 20px;
+  padding-top: 20px;
+}
+.navbar-container .menu-links .links li a {
+  color: white;
+}
+
+@media screen and (min-width: 400px) {
+  .navbar-container {
+    padding: 30px;
+  }
+  .navbar-container .menu-links {
+    padding: 25px 30px;
+    width: 400px;
+  }
+  .navbar-container .menu-links .links li {
+    font-size: 26px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -14,6 +14,9 @@ a {
 }
 
 // common styles
+body {
+    overflow: hidden;
+}
 .container {
     max-width: 1440px;
     margin: auto;
@@ -22,11 +25,14 @@ a {
 .navbar-container {
     display: flex; 
     justify-content: space-between;
-    padding: 1rem 0;
+    align-items: center;
+    padding: 25px 15px;
+    position: relative;
 
     .my-name {
         font-size: 1.5rem;
         font-weight: 600;
+        color: black;
     }
 
     #menu-icon-btn {
@@ -37,4 +43,52 @@ a {
             font-size: 1.5rem;
         }
     }
+
+    .menu-links {
+        position: absolute;
+        background: #191B13;
+        width: 100%; 
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding: 20px 25px;
+        transition: all 0.5s ease-in-out;
+
+        .menu-close {
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+
+        }
+
+        .links {
+            li {
+                font-size: 20px;
+                padding-top:20px ;
+            
+                a {
+                    color: white;
+                }
+
+            }
+        }
+    }
+}
+
+// responsive navbar
+@media screen and (min-width:400px) {
+    .navbar-container  {
+        padding: 30px;
+        .menu-links {
+        padding: 25px 30px;
+        width: 400px; 
+
+        .links {
+
+            li {
+                font-size: 26px;
+            }
+        }
+    }
+}
 }
