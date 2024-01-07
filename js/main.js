@@ -6,5 +6,5 @@ menuBtn.addEventListener("click", () => {
   menuLinks.style.right = "0";
 });
 menuClose.addEventListener("click", () => {
-  menuLinks.style.right = "-400px";
+  menuLinks.style.right = "-450px";
 });
