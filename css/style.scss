@@ -19,22 +19,26 @@ a {
 body {
     overflow: hidden;
     position: relative;
-    background-color: #0d1e2e;
     font-family: 'Roboto', sans-serif;
-   
 }
+
 .container {
     max-width: 1440px;
     margin: auto;
 }
 
 .header {
+    background-color: #0d1e2e;
+}
+
+.header-container {
     background-image: url('../asset/profile-8.png');
     background-color: #0000002f;
     background-blend-mode: overlay;
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .navbar-container {
@@ -63,7 +67,7 @@ body {
     .menu-links {
         
         position: absolute;
-        background: #191B13;
+        background: #0b1824;
         width: 100%; 
         height: 100vh;
         top: 0;
@@ -94,7 +98,7 @@ body {
 
 // responsive navbar
 @media screen and (min-width:450px) {
-    .header {
+    .header-container {
         background-position: right 0;
         background-size: contain;
     }
@@ -128,7 +132,6 @@ body {
     margin: 20px;
     color: white;
     background-color: #0d1e2e8c;
- 
 
     h6 {
         font-size: 20px;
@@ -147,6 +150,8 @@ body {
     }
 
     .btn-container {
+        // display: inline-block;
+        height: 41px;
         position: relative;
         .download-btn {
             background: none;
@@ -155,15 +160,13 @@ body {
             color: white;
             font-size: 18px;
             cursor: pointer;
+            z-index: 10;
+            position: absolute;
             transition: all 0.5s;
-           
         }
-        .download-btn:hover {
-            color: black;
-            background-color: white;
-        }
+        
 
-        .border {
+        .inner-btn {
             background: none;
             padding: 10px 16px;
             
@@ -171,13 +174,15 @@ body {
             border-left: 1px solid white;
             border-top: 1px solid white;
             border-bottom: 1px solid white;
-
             position: absolute;
             left: 0;
             height: 100%;
             width: 50px;
-            z-index: -1;
         }  
+        .download-btn:hover {
+            background-color: #fff;
+            color: black;
+        }
 
         
     }
